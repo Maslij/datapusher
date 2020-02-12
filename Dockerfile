@@ -3,7 +3,7 @@ FROM alpine:3.8
 LABEL Mark Moloney <m4rkmo@gmail.com>
 
 ENV APP_DIR=/srv/app
-ENV GIT_BRANCH 0.0.14
+ENV GIT_BRANCH master
 ENV GIT_URL https://github.com/markmo/datapusher.git
 ENV JOB_CONFIG ${APP_DIR}/datapusher_settings.py
 
