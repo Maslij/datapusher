@@ -39,6 +39,6 @@ RUN apk add --no-cache --virtual .build-deps \
 COPY deployment/datapusher_settings.py ${APP_DIR}/datapusher_settings.py
 COPY wsgi.py ${APP_DIR}/wsgi.py
 
-EXPOSE 8000
+EXPOSE 8800
 
-CMD ["gunicorn", "-b=0.0.0.0", "--log-file=-", "wsgi:app"]
+CMD ["gunicorn", "-b=0.0.0.0", "--log-file=-", "--log-level=debug", "--timeout=60", "wsgi:app"]
